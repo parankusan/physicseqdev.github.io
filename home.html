@@ -1,0 +1,137 @@
+<html>
+  <head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        font-family: calibri,sans-serif;
+        font-weight: 200;
+        color: darkslategray;
+      }
+      .fixeddivs {
+        background-size:cover;
+        background-attachment:fixed;
+        width: 100vw;
+        height: 80vh;
+        text-align: center;
+      }
+      #navbar {
+        background-color: lightgray;
+        width: 100vw;
+        height: 2.9em;
+        padding-top: 1.3em;
+      }
+      #navbar > a {
+        background-color: lightgray;
+        color: black;
+        font-size: 1.3em;
+        padding: 1em;
+        text-decoration: none;
+        margin:  0;
+        transition: all 1s;
+      }
+      #navbar > a:hover {
+        background-color: black;
+        color :white;
+      }
+      #navbar > a:active {
+        background-color: orange;
+        color :white;
+      }
+      input[type=text]
+      {
+          width:200px;
+          padding: 8px;
+          border-radius: 20px 20px 20px 20px;
+          background-color: rgba(0,0,0,0.7);
+          color:aliceblue;
+          height: 40px;
+          font-size: 16px;
+          text-align: center;
+          -webkit-transition:width 0.4s ease-in-out;
+          transition: width 0.4s ease-in-out;
+      }
+      #clsbtn
+      {
+          position: absolute;
+          top:0;
+          font-size: 36px;
+          right:45px;
+          display: none;
+          cursor: pointer;
+          color:aliceblue;
+          font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <img src="logo.png" width="200px" height="100px"/><br/>
+      <span id="clsbtn" onclick="closelay()">&times;</span>
+      <input type="text" id="srch" placeholder="Search..." onfocus="overlay()">
+    </center>
+    <br/><br/>
+    <div id="navbar">
+        <a href="home.html">Home</a>
+        <a href="#forum">Forum</a>
+        <a href="#about">About physicseq</a>
+    </div>
+    <div style="background-color:lightblue;width:100vw;height:60vh">
+      <center><h2>Put slideshow in this div</h2></center>
+    </div>
+    <div class="fixeddivs" style="background-image:url('electro.jpg')"></div>
+    <div style="width:90vw;height:60vh;padding:50px;font-size:1.2em">
+      <h1>ELECTRODYNAMICS</h1>
+      Classical electromagnetism or classical electrodynamics is a branch of theoretical physics
+      that studies the interactions between electric charges and currents using an extension of
+      the classical Newtonian model. The theory provides an excellent description of electromagnetic
+      phenomena whenever the relevant length scales and field strengths are large enough that
+      quantum mechanical effects are negligible. For small distances and low field strengths,
+      such interactions are better described by quantum electrodynamics. Fundamental physical aspects
+      of classical electrodynamics are presented in many texts, such as those by Feynman, Leighton
+      and Sands, Panofsky and Phillips, and Jackson.
+    </div>
+    <div class="fixeddivs" style="background-image:url('mech.jpg')"></div>
+    <div style="width:90vw;height:60vh;padding:50px;font-size:1.2em">
+      <h1>MECHANICS</h1>
+      Classical electromagnetism or classical electrodynamics is a branch of theoretical physics
+      that studies the interactions between electric charges and currents using an extension of
+      the classical Newtonian model. The theory provides an excellent description of electromagnetic
+      phenomena whenever the relevant length scales and field strengths are large enough that
+      quantum mechanical effects are negligible. For small distances and low field strengths,
+      such interactions are better described by quantum electrodynamics. Fundamental physical aspects
+      of classical electrodynamics are presented in many texts, such as those by Feynman, Leighton
+      and Sands, Panofsky and Phillips, and Jackson.
+    </div>
+    <div class="fixeddivs" style="background-image:url('rel.png')"></div>
+    <div style="width:90vw;height:60vh;padding:50px;font-size:1.2em">
+      <h1>RELATIVITY</h1>
+      Classical electromagnetism or classical electrodynamics is a branch of theoretical physics
+      that studies the interactions between electric charges and currents using an extension of
+      the classical Newtonian model. The theory provides an excellent description of electromagnetic
+      phenomena whenever the relevant length scales and field strengths are large enough that
+      quantum mechanical effects are negligible. For small distances and low field strengths,
+      such interactions are better described by quantum electrodynamics. Fundamental physical aspects
+      of classical electrodynamics are presented in many texts, such as those by Feynman, Leighton
+      and Sands, Panofsky and Phillips, and Jackson.
+    </div>
+  <script type="text/javascript">
+    function overlay()
+    {
+        document.getElementById("srch").style.width="80%";
+        document.getElementById("clsbtn").style.display="block";
+        document.body.style.backgroundColor="rgba(0,0,0,0.4)";
+    }
+    function closelay()
+    {
+        document.getElementById("srch").style.width="200px";
+        document.getElementById("clsbtn").style.display="none";
+        document.body.style.backgroundColor="white";
+    }
+  </script>
+  </body>
+</html>
