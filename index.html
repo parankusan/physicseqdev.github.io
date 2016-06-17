@@ -1,7 +1,8 @@
 <html>
   <head>
-    <title>Home</title>
+    <title>PhysicsEQ</title>
     <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:700' rel='stylesheet' type='text/css'>
     <style>
       * {
         padding: 0;
@@ -9,9 +10,8 @@
       }
       body {
         font-family: calibri,sans-serif;
-        font-weight: 200;
         color: darkslategray;
-	overflow-x: hidden;
+        overflow-x: hidden;
       }
       .fixeddivs {
         background-size:cover;
@@ -21,31 +21,37 @@
         text-align: center;
       }
       #navbar {
+        text-align: center;
         background-color: lightgray;
         width: 100vw;
         height: 2.9em;
         padding-top: 1.3em;
+        z-index: 1;
       }
       #navbar > a {
         background-color: lightgray;
+        display: inline;
         color: black;
         font-size: 1.3em;
+        font-weight: bold;
         padding: 1em;
         text-decoration: none;
         margin:  0;
         transition: all 1s;
       }
-      #navbar > a:hover {
+
+        #navbar > a:hover {
         background-color: black;
         color :white;
       }
+
       #navbar > a:active {
         background-color: orange;
         color :white;
       }
       input[type=text]
       {
-          width:200px;
+          width:300px;
           padding: 8px;
           border-radius: 20px 20px 20px 20px;
           background-color: rgba(0,0,0,0.7);
@@ -56,18 +62,12 @@
           -webkit-transition:width 0.4s ease-in-out;
           transition: width 0.4s ease-in-out;
       }
-      #clsbtn
-      {
-          position: absolute;
-          top:0;
-          font-size: 36px;
-          right:45px;
-          display: none;
-          cursor: pointer;
-          color:aliceblue;
-          font-weight: 700;
-      }
-	  .button
+     .footer{
+     		color: white;
+            background-color: black;
+            padding: 1%;
+        }
+      	  .button
 	  {
   		   font-size:15px;
 		   background-color:#999;
@@ -104,30 +104,34 @@
       }
     </style>
   </head>
-  <body>
+  <body onscroll="scroll()">
     <center>
-      <img src="logo.png" width="200px" height="100px"/><br/>
-      <span id="clsbtn" onClick="closelay()">&times;</span>
-      <input type="text" id="srch" placeholder="Search..." onFocus="overlay()">
-    </center>
+      <div style="background-color: azure;">
+      <img src="logo.png" width="200px" height="100px"/><br/><br/>
+      <input type="text" id="srch" placeholder="Search..." onfocus="overlay()" onblur="closelay()">
     <br/><br/>
+      </div>
+    </center>
+    
+
     <div id="navbar">
-        <a href="home.html">Home</a>
-        <a href="#forum">Forum</a>
-        <a href="#about">About physicseq</a>
+        <a href="home.html">HOME</a>
+        <a href="#forum" >FORUM</a>
+        <a href="#about">ABOUT PHYSICSEQ</a>
+        <a href="#login">LOGIN</a>
     </div>
-    <div class="Img" style="background-color:lightblue;width:100vw;height:60vh">
- 		<img onMouseOver="halt()" onMouseOut="start()" src="physics.jpg" id="physics" style="width:100% ;height: 400px;" />
+	<div class="Img" style="background-color:lightblue;width:100vw;height:60vh">
+ 		<img onMouseOver="halt()" onMouseOut="start()" src="physics.jpg" id="physics" style="width:100% ;height: 500px;" />
  	</div>
 	<center>
 		<button class=button type=button id="b0" value="b0" onClick="fun(0)" style="left: 42%;"></button>
-		<button class=button type=button id="b1" value="b1" onClick="fun(1)" style="left: 47%";></button>
-		<button class=button type=button id="b2" value="b2" onClick="fun(2)" style="left: 52%"></button>
-        <button class=button type=button id="b3" value="b3" onClick="fun(3)" style="left: 57%"></button>
+		<button class=button type=button id="b1" value="b1" onClick="fun(1)" style="left: 47%;"></button>
+		<button class=button type=button id="b2" value="b2" onClick="fun(2)" style="left: 52%;"></button>
+        <button class=button type=button id="b3" value="b3" onClick="fun(3)" style="left: 57%;"></button>
     </div>
     <div class="fixeddivs" style="background-image:url('electro.jpg')"></div>
-    <div style="width:90vw;height:60vh;padding:50px;font-size:1.2em">
-      <h1>ELECTRODYNAMICS</h1><br /><br />
+    <div style="width:90vw;height:60vh;padding:50px;font-size:1.2em;font-family:'Quicksand'">
+      <h1>ELECTRODYNAMICS</h1>
       Classical electromagnetism or classical electrodynamics is a branch of theoretical physics
       that studies the interactions between electric charges and currents using an extension of
       the classical Newtonian model. The theory provides an excellent description of electromagnetic
@@ -135,35 +139,36 @@
       quantum mechanical effects are negligible. For small distances and low field strengths,
       such interactions are better described by quantum electrodynamics. Fundamental physical aspects
       of classical electrodynamics are presented in many texts, such as those by Feynman, Leighton
-      and Sands, Panofsky and Phillips, and Jackson.<br /><br />
-      <a href="https://en.wikipedia.org/wiki/Classical_electromagnetism" > Read More &gt;&gt; </a>
+      and Sands, Panofsky and Phillips, and Jackson.<br/>
+      <a href="#" style="text-decoration: none;color: blue;">Jump into the world of electrodynamics &rarr;</a>
     </div>
     <div class="fixeddivs" style="background-image:url('mech.jpg')"></div>
-    <div style="width:90vw;height:60vh;padding:50px;font-size:1.2em">
-      <h1>MECHANICS</h1><br /><br />
-     Mechanics (Greek μηχανική) is an area of science concerned with the behavior of physical bodies
+    <div style="width:90vw;height:60vh;padding:50px;font-size:1.2em;font-family:'Quicksand'">
+      <h1>MECHANICS</h1>
+     Mechanics is an area of science concerned with the behavior of physical bodies
      when subjected to forces or displacements, and the subsequent effects of the bodies on their environment.
      The scientific discipline has its origins in Ancient Greece with the writings of Aristotle and Archimedes.
      During the early modern period, scientists such as Khayaam, Galileo, Kepler, and Newton, laid the foundation
      for what is now known as classical mechanics. It is a branch of classical physics that deals with particles that
      are either at rest or are moving with velocities significantly less than the speed of light. It can also be
-     defined as a branch of science which deals with the motion of and forces on objects.<br /><br />
-     <a href="https://en.wikipedia.org/wiki/Mechanics" > Read More &gt;&gt; </a>
+     defined as a branch of science which deals with the motion of and forces on objects.<br/>
+      <a href="#" style="text-decoration: none;color: blue;">Plunge into the world of mechanics &rarr;</a>
+
     </div>
     <div class="fixeddivs" style="background-image:url('rel.png')"></div>
-    <div style="width:90vw;height:60vh;padding:50px;font-size:1.2em">
-      <h1>RELATIVITY</h1><br /><br />
+    <div style="width:90vw;height:60vh;padding:50px;font-size:1.2em;font-family:'Quicksand'">
+      <h1>RELATIVITY</h1>
       The theory of relativity usually encompasses two theories by Albert Einstein: special relativity and general relativity.
       Concepts introduced by the theories of relativity include spacetime as a unified entity of space and time,
       relativity of simultaneity, kinematic and gravitational time dilation, and length contraction.
-	  The term "theory of relativity" was based on the expression "relative theory" used in 1906 by Max Planck,
+      The term "theory of relativity" was based on the expression "relative theory" used in 1906 by Max Planck,
       who emphasized how the theory uses the principle of relativity. In the discussion section of the same paper,
-      Alfred Bucherer used for the first time the expression "theory of relativity".<br /><br />
-      <a href="https://en.wikipedia.org/wiki/Theory_of_relativity" > Read More &gt;&gt; </a>
+      Alfred Bucherer used for the first time the expression "theory of relativity".<br/>
+      <a href="#" style="text-decoration: none;color: blue;">Dive into the world of relativity &rarr;</a>
     </div>
+    <div class="footer">PhysicsEQ : Abishek Bhattacharya</div>
   <script type="text/javascript">
-  	
-	var bgimages=new Array()
+  	var bgimages=new Array()
 	bgimages[0]="physics.jpg"
 	bgimages[1]="magnet.jpg"
 	bgimages[2]="pend.jpg"
@@ -171,10 +176,7 @@
 
 	var str=["b0","b1","b2","b3"];
 	var Timer=null;
-	//var Playpause=false;
 
-
-	//preload images
 	var pathToImg=new Array()
 	for (i=0;i<bgimages.length;i++){
 	pathToImg[i]=new Image()
@@ -191,25 +193,13 @@
 	function start(){
 		Timer=setInterval("bgSlide()",3000);
 	}
-/*function ss(){
-	Playpause=!Playpause;
-	if(Playpause){
-		document.getElementById("pp").src="play.jpg";
-		halt();
-	}
-	else{
-		document.getElementById("pp").src="pause.png";
-		start();
-	}
-}*/
 
-	
 	
 	function fun(inc){
 		document.getElementById("physics").src=pathToImg[arguments[0]].src;
 		inc=arguments[0]-1;
 	
-}
+	}
 
 
 	function bgSlide(){
@@ -236,9 +226,21 @@
     }
     function closelay()
     {
-        document.getElementById("srch").style.width="200px";
+        document.getElementById("srch").style.width="300px";
         document.getElementById("clsbtn").style.display="none";
         document.body.style.backgroundColor="white";
+    }
+    function scroll()
+    {
+    	//console.log(document.body.scrollTop);
+    	if(document.body.scrollTop>=180)
+    	{
+    		document.getElementById("navbar").style="position: fixed; top: 0;";
+    	}
+    	else if(document.body.scrollTop<180)
+    	{
+    		document.getElementById("navbar").style="position: static;";
+    	}
     }
   </script>
   </body>
